@@ -1,0 +1,316 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+main {
+  width: 100%;
+  height: 100%;
+  background-image: url("https://images.unsplash.com/photo-1499678329028-101435549a4e?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+main .desktop {
+  height: 93%;
+  padding: 5px 20px 5px 10px;
+}
+main .desktop .icons {
+  height: 100%;
+  width: 14rem;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+main .desktop .icons .icon {
+  width: 80px;
+  padding: 2px;
+  border-radius: 2px;
+  transition: 0.3s all ease;
+}
+main .desktop .icons .icon img {
+  margin-left: 15px;
+  width: 50px;
+}
+main .desktop .icons .icon p {
+  width: 80px;
+  text-align: center;
+  color: white;
+  text-shadow: 1px 1px 3px black;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 13px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+main .desktop .icons .icon:hover {
+  background-color: rgba(255, 255, 255, 0.115);
+}
+main .taskbar {
+  height: 7%;
+  padding: 0px 14px 0px 14px;
+  background-color: rgb(29, 29, 29);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+main .taskbar .left {
+  width: 143px;
+  padding: 4px 10px 4px 10px;
+  border-radius: 5px;
+  display: flex;
+  gap: 10px;
+  justify-content: start;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+main .taskbar .left .weatherIcon {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: linear-gradient(to bottom right, rgb(255, 210, 49), rgb(255, 68, 0));
+}
+main .taskbar .left .weather {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+main .taskbar .left .weather p:nth-child(1) {
+  color: white;
+  font-size: 13px;
+}
+main .taskbar .left .weather p:nth-child(2) {
+  color: rgb(188, 188, 188);
+  font-size: 13px;
+}
+main .taskbar .left:hover {
+  background-color: rgba(199, 199, 199, 0.112);
+}
+main .taskbar .mid {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+main .taskbar .mid .icon {
+  position: relative;
+  padding: 5px 5px 2px 5px;
+  border-radius: 3px;
+  transition: 0.2s all ease;
+}
+main .taskbar .mid .icon img {
+  width: 30px;
+}
+main .taskbar .mid .icon span {
+  max-width: 200px;
+  white-space: nowrap;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: white;
+  font-size: 13px;
+  background: rgba(33, 33, 33, 0.552);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  position: absolute;
+  top: -100%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 5px 10px 8px 10px;
+  border-radius: 5px;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s ease 0.7s;
+}
+main .taskbar .mid .icon:hover {
+  background-color: rgba(199, 199, 199, 0.112);
+}
+main .taskbar .mid .icon:hover span {
+  visibility: visible;
+  opacity: 1;
+}
+main .taskbar .mid .searchBar input {
+  background-image: url("/icons8-search-96.png");
+  background-size: 18px;
+  background-repeat: no-repeat;
+  background-position: 10px center;
+  padding: 6px 35px;
+  border-radius: 30px;
+}
+main .taskbar .mid .searchBar input::-moz-placeholder {
+  color: rgb(100, 100, 100);
+  font-size: 13px;
+}
+main .taskbar .mid .searchBar input::placeholder {
+  color: rgb(100, 100, 100);
+  font-size: 13px;
+}
+main .taskbar .right {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0px;
+}
+main .taskbar .right .hoverTxt {
+  max-width: 500px;
+  white-space: nowrap;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: white;
+  font-size: 13px;
+  background: rgba(33, 33, 33, 0.552);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  position: absolute;
+  top: -100%;
+  left: 50%;
+  transform: translateX(-60%);
+  padding: 5px 10px 8px 10px;
+  border-radius: 5px;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s ease 0.7s;
+}
+main .taskbar .right .slideUpMenu {
+  padding: 10px 7px 10px 7px;
+  border-radius: 3px;
+  transition: 0.2s all ease;
+  position: relative;
+}
+main .taskbar .right .slideUpMenu i {
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+}
+main .taskbar .right .slideUpMenu:hover {
+  background-color: rgba(199, 199, 199, 0.112);
+}
+main .taskbar .right .slideUpMenu:hover .hoverTxt {
+  visibility: visible;
+  opacity: 1;
+}
+main .taskbar .right .icon {
+  position: relative;
+  padding: 11px 7px 11px 7px;
+  border-radius: 3px;
+  transition: 0.2s all ease;
+}
+main .taskbar .right .icon img {
+  width: 18px;
+}
+main .taskbar .right .icon:hover {
+  background-color: rgba(199, 199, 199, 0.112);
+}
+main .taskbar .right .icon:hover .hoverTxt {
+  visibility: visible;
+  opacity: 1;
+}
+main .taskbar .right .language {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 4px 10px 4px 10px;
+  border-radius: 3px;
+  transition: 0.2s all ease;
+}
+main .taskbar .right .language span {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 12px;
+  color: white;
+}
+main .taskbar .right .language .hoverTxt {
+  top: -240%;
+  transform: translateX(-50%);
+}
+main .taskbar .right .language .hoverTxt .short2 {
+  margin-bottom: 20px;
+}
+main .taskbar .right .language:hover {
+  background-color: rgba(199, 199, 199, 0.112);
+}
+main .taskbar .right .language:hover .hoverTxt {
+  visibility: visible;
+  opacity: 1;
+}
+main .taskbar .right .icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  padding: 0px 5px 0px 5px;
+  border-radius: 3px;
+  transition: 0.2s all ease;
+}
+main .taskbar .right .icons .icon {
+  padding: 8px 2px 8px 2px;
+  position: relative;
+}
+main .taskbar .right .icons .icon .hoverTxt {
+  top: -155%;
+  transform: translateX(-50%);
+}
+main .taskbar .right .icons .icon:nth-child(2) .hoverTxt,
+main .taskbar .right .icons :nth-child(3) .hoverTxt {
+  top: -110%;
+  transform: translateX(-50%);
+}
+main .taskbar .right .icons .icon:hover {
+  background-color: rgba(199, 199, 199, 0);
+}
+main .taskbar .right .icons .icon:hover .hoverTxt {
+  visibility: visible;
+  opacity: 1;
+}
+main .taskbar .right .icons:hover {
+  background-color: rgba(199, 199, 199, 0.112);
+}
+main .taskbar .right .corner {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  padding: 0px 5px 0px 5px;
+  border-radius: 3px;
+  transition: 0.2s all ease;
+}
+main .taskbar .right .corner .dateTime {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: end;
+}
+main .taskbar .right .corner .dateTime span {
+  color: white;
+  font-size: 13px;
+}
+main .taskbar .right .corner .dateTime .hoverTxt {
+  top: -155%;
+  transform: translateX(-60%);
+}
+main .taskbar .right .corner .icon {
+  padding: 8px 2px 8px 2px;
+}
+main .taskbar .right .corner .icon .hoverTxt {
+  top: -110%;
+  transform: translateX(-90%);
+}
+main .taskbar .right .corner .icon:hover {
+  background-color: rgba(199, 199, 199, 0);
+}
+main .taskbar .right .corner .dateTime:hover .hoverTxt {
+  visibility: visible;
+  opacity: 1;
+}
+main .taskbar .right .corner .icon:hover .hoverTxt {
+  visibility: visible;
+  opacity: 1;
+}
+main .taskbar .right .corner:hover {
+  background-color: rgba(199, 199, 199, 0.112);
+}/*# sourceMappingURL=style.css.map */
