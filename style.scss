@@ -10,7 +10,12 @@ html,
 body {
     height: 100%;
     width: 100%;
-    // background-color: black;
+}
+
+.line {
+    background-color: rgb(216, 216, 216);
+    height: 0.1px;
+    // border: 0.1px solid rgb(125, 125, 125);
 }
 
 main {
@@ -23,6 +28,7 @@ main {
     // background-position: center;
 
     .desktop {
+        position: relative;
         height: 93%;
         // background-color: rgba(127, 255, 212, 0.271);
         padding: 5px 20px 5px 10px;
@@ -67,6 +73,132 @@ main {
             }
         }
 
+
+
+        .rightClickMenu {
+            width: 235px;
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            background-color: rgba(255, 255, 255, 0.881);
+            backdrop-filter: blur(10px);
+            padding: 0px 2px;
+            border-radius: 10px;
+
+            display: flex;
+            flex-direction: column;
+            // gap: 4px;
+
+            .options {
+                padding: 5px 4px;
+                display: flex;
+                flex-direction: column;
+                gap: 4px;
+                cursor: default;
+
+                .option {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding: 3px 8px;
+                    border-radius: 5px;
+                    transition: 0.1s all ease 0.02s;
+                    position: relative;
+
+                    .left {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        gap: 5px;
+                        img {
+                            width: 18px;
+                        }
+
+                        p {
+                            font-size: 13px;
+                            color: black;
+                        }
+                    }
+
+                    .right {
+                        i {
+                            color: rgba(81, 81, 81, 0.595);
+                        }
+
+                        p {
+                            color: rgb(81, 81, 81);
+                            font-size: 12px;
+                        }
+                    }
+                }
+
+                .option:hover {
+                    background-color: rgba(177, 177, 177, 0.226);
+                }
+
+
+
+                // global
+                .menuu{
+                        position: absolute;
+                        top: 0;
+                        right: -105%;
+
+                        // width: 235px;
+                        background-color: rgba(255, 255, 255, 0.881);
+                        backdrop-filter: blur(10px);
+                        padding: 0px 2px;
+                        border-radius: 10px;
+
+                        display: flex;
+                        flex-direction: column;
+                        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.545);
+                        // display: none;
+
+                        .items {
+                            padding: 5px 4px;
+                            display: flex;
+                            flex-direction: column;
+                            gap: 4px;
+                            cursor: default;
+
+                            .item {
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: center;
+                                padding: 3px 8px;
+                                border-radius: 5px;
+                                transition: 0.1s all ease 0.02s;
+                                position: relative;
+                            }
+
+                            .item:hover {
+                                background-color: rgba(177, 177, 177, 0.226);
+                            }
+                        }
+                    }
+
+                .option.view {
+                    .viewMenu {
+                        right: -106%;
+                        width: 235px;
+                        // display: none;
+                    }
+                }
+                .option.sortBy {
+                    .sortByMenu {
+                        right: -50%;
+                        // display: none;
+                    }
+                }
+                .option.new {
+                    .newMenu {
+                        right: -112%;
+                        // display: none;
+                    }
+                }
+            }
+        }
     }
 
     .taskbar {
@@ -404,7 +536,7 @@ main {
         }
     }
 
-    
+
     .windows {
         // display: none;
         padding: 40px 34px 70px 34px;
@@ -426,7 +558,7 @@ main {
         visibility: hidden;
         opacity: 0;
         top: 53%;
-        
+
         transition: 0.2s all linear;
 
         .search {
@@ -713,3 +845,59 @@ main {
     }
 
 }
+
+
+
+// .items {
+//     padding: 5px 4px;
+//     display: flex;
+//     flex-direction: column;
+//     gap: 4px;
+//     cursor: default;
+
+//     .item {
+//         display: flex;
+//         justify-content: space-between;
+//         align-items: center;
+//         padding: 3px 8px;
+//         border-radius: 5px;
+//         transition: 0.1s all ease 0.02s;
+//         position: relative;
+
+//         .left {
+//             display: flex;
+//             align-items: center;
+//             justify-content: center;
+//             gap: 5px;
+
+//             img {
+//                 width: 18px;
+//             }
+
+//             p {
+//                 font-size: 13px;
+//                 color: black;
+//             }
+//         }
+
+//         .right {
+//             i {
+//                 color: rgba(81, 81, 81, 0.595);
+//             }
+
+//             p {
+//                 color: rgb(81, 81, 81);
+//                 font-size: 12px;
+//             }
+//         }
+//     }
+
+//     .item:hover {
+//         background-color: rgba(177, 177, 177, 0.226);
+//     }
+
+//     .line {
+//         background-color: rgb(216, 216, 216);
+//         height: 0.1px;
+//     }
+// }
