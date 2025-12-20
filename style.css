@@ -30,7 +30,7 @@ main .desktop {
   height: 93%;
   padding: 5px 20px 5px 10px;
 }
-main .desktop .icons {
+main .desktop .desktopIcons {
   height: 100%;
   width: 14rem;
   display: flex;
@@ -38,17 +38,17 @@ main .desktop .icons {
   gap: 8px;
   flex-wrap: wrap;
 }
-main .desktop .icons .icon {
+main .desktop .desktopIcons .icon {
   width: 80px;
   padding: 2px;
   border-radius: 2px;
   transition: 0.3s all ease;
 }
-main .desktop .icons .icon img {
+main .desktop .desktopIcons .icon img {
   margin-left: 15px;
   width: 50px;
 }
-main .desktop .icons .icon p {
+main .desktop .desktopIcons .icon p {
   width: 80px;
   text-align: center;
   color: white;
@@ -58,14 +58,12 @@ main .desktop .icons .icon p {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-main .desktop .icons .icon:hover {
+main .desktop .desktopIcons .icon:hover {
   background-color: rgba(255, 255, 255, 0.115);
 }
 main .desktop .rightClickMenu {
   width: 235px;
   position: absolute;
-  top: 20%;
-  left: 50%;
   background-color: rgba(255, 255, 255, 0.881);
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
@@ -73,6 +71,8 @@ main .desktop .rightClickMenu {
   border-radius: 10px;
   display: flex;
   flex-direction: column;
+  display: none;
+  visibility: hidden;
 }
 main .desktop .rightClickMenu .options {
   padding: 5px 4px;
@@ -148,12 +148,17 @@ main .desktop .rightClickMenu .options .menuu .items .item:hover {
 main .desktop .rightClickMenu .options .option.view .viewMenu {
   right: -106%;
   width: 235px;
+  display: none;
 }
 main .desktop .rightClickMenu .options .option.sortBy .sortByMenu {
   right: -50%;
+  width: 110px;
+  display: none;
 }
 main .desktop .rightClickMenu .options .option.new .newMenu {
   right: -112%;
+  width: 249px;
+  display: none;
 }
 main .taskbar {
   height: 7%;

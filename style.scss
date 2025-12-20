@@ -30,20 +30,17 @@ main {
     .desktop {
         position: relative;
         height: 93%;
-        // background-color: rgba(127, 255, 212, 0.271);
         padding: 5px 20px 5px 10px;
 
-        .icons {
+        .desktopIcons {
             height: 100%;
             width: 14rem;
-            // background-color: rgba(255, 0, 0, 0.621);
             display: flex;
             flex-direction: column;
             gap: 8px;
             flex-wrap: wrap;
 
             .icon {
-                // background-color: white;
                 width: 80px;
                 padding: 2px;
                 border-radius: 2px;
@@ -78,8 +75,8 @@ main {
         .rightClickMenu {
             width: 235px;
             position: absolute;
-            top: 20%;
-            left: 50%;
+            // top: 20%;
+            // left: 50%;
             background-color: rgba(255, 255, 255, 0.881);
             backdrop-filter: blur(10px);
             padding: 0px 2px;
@@ -88,6 +85,8 @@ main {
             display: flex;
             flex-direction: column;
             // gap: 4px;
+            display: none;
+            visibility: hidden;
 
             .options {
                 padding: 5px 4px;
@@ -176,25 +175,27 @@ main {
                                 background-color: rgba(177, 177, 177, 0.226);
                             }
                         }
-                    }
+                }
 
                 .option.view {
                     .viewMenu {
                         right: -106%;
                         width: 235px;
-                        // display: none;
+                        display: none;
                     }
                 }
                 .option.sortBy {
                     .sortByMenu {
                         right: -50%;
-                        // display: none;
+                        width: 110px;
+                        display: none;
                     }
                 }
                 .option.new {
                     .newMenu {
                         right: -112%;
-                        // display: none;
+                        width: 249px;
+                        display: none;
                     }
                 }
             }
