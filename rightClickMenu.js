@@ -143,16 +143,9 @@
 // }
 // export default rightClickMenu;
 
-
-
-
-
-
 function rightClickMenu() {
 
-    /* ===============================
-       MAIN ELEMENTS
-    =============================== */
+    /*MAIN ELEMENTS*/
     const desktop = document.querySelector("section.desktop");
     const rcMenu = document.querySelector(".rightClickMenu");
 
@@ -168,9 +161,7 @@ function rightClickMenu() {
     let clickX = 0;
     let clickY = 0;
 
-    /* ===============================
-       UTILITY FUNCTIONS
-    =============================== */
+    /*UTILITY FUNCTIONS*/
 
     function hideAllSubMenus() {
         viewMenu.style.display = "none";
@@ -189,9 +180,7 @@ function rightClickMenu() {
     const subWidth = subMenu.offsetWidth;
     const subHeight = subMenu.offsetHeight;
 
-    /* ===============================
-       HORIZONTAL POSITION
-    =============================== */
+    /*HORIZONTAL POSITION*/
 
     // Default: open to the right
     let left = parentRect.width;
@@ -201,9 +190,7 @@ function rightClickMenu() {
         left = -subWidth;
     }
 
-    /* ===============================
-       VERTICAL POSITION
-    =============================== */
+    /*VERTICAL POSITION*/
 
     // Align top with parent item
     let top = 0;
@@ -220,9 +207,7 @@ function rightClickMenu() {
 }
 
 
-    /* ===============================
-       RIGHT CLICK MENU OPEN
-    =============================== */
+    /*RIGHT CLICK MENU OPEN*/
 
     function showRightClickMenu(x, y) {
         clickX = x;
@@ -257,9 +242,7 @@ function rightClickMenu() {
         menuOpen = false;
     }
 
-    /* ===============================
-       EVENT LISTENERS (ONLY ONCE)
-    =============================== */
+    /*EVENT LISTENERS (ONLY ONCE)*/
 
     desktop.addEventListener("contextmenu", (e) => {
         e.preventDefault();
